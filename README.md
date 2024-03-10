@@ -39,20 +39,21 @@ Since the best throughput didn't exceed 2000, I later tried to change EC2s' type
 
 ## part 3
 
-This part builds an asynchronous request processing on top of the single server version of part 2. The data for such processing is a new use case - dealing with like and dislikes from users for albums. The new endpoint is shown [here](https://app.swaggerhub.com/apis/IGORTON/AlbumStore/1.1#).
+This part builds an asynchronous request processing on top of the single server version of part 2. The data for such processing is a new use case - dealing with likes and dislikes from users for albums. The new endpoint is shown [here](https://app.swaggerhub.com/apis/IGORTON/AlbumStore/1.1#).
 
 So the system this time not only deals with storing new albums, but also user's reviews (likes or dislikes). Using RabbitMQ broker, I modified the server code and implemented a Consumer to process reviews in a delayed manner. The system looks like this:
 
 <img width="430" alt="Screenshot 2024-03-10 at 12 32 48 AM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/caa31615-9650-4012-b353-365730462644">
 
-This time's test is a little bit different. While loads testing the system, RabbitMQ performed as expected. This is one moment of the broker performance, production rate is close to consumption rate:
-```
-<pic6>
-```
-And this is a 10-min look:
-```
-<pic7>
-```
+This time's test reduced to run 400 requests every thread (100 POST new albums and 300 POST reviews). The final throughputs didn't act fast as in part2, but RabbitMQ performed as expected. This is one moment of the broker performance, production rate is close to consumption rate:
+
+<img width="420" alt="Screenshot 2024-03-09 at 9 08 31 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/dd95886a-a66a-4df9-b78c-3ddff047dbfc">
+
+And this is the performance look for all tests:
+
+<img width="380" alt="Screenshot 2024-03-09 at 9 08 43 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/a58b6782-3747-47c4-991e-77e6c0152f46">
+
+
 
 ## part 4
  
