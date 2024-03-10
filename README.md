@@ -12,11 +12,11 @@ The setup scenario is a simplified music service and the API endpoints used are 
 
 The test was using different sizes of thread groups and each thread ran 2000 requests concurrently (1000 GET and 1000 POST requests). The test result was not perfect, but it was on the right track: the throughput per second for consuming 600,000 requests can be over 2000 and Go did perform faster tha Java server in general. One example of the test window is like:
 
-<img width="494" alt="Screenshot 2024-03-09 at 5 59 17 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/ef53e352-ee26-453b-9c33-ce6352d6fc3a">
+<img width="350" alt="Screenshot 2024-03-09 at 5 59 17 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/ef53e352-ee26-453b-9c33-ce6352d6fc3a">
 
 And the throughput change over consuming 600,000 requests is like:
 
-<img width="382" alt="Screenshot 2024-03-09 at 5 59 30 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/b3123d12-9b55-45f4-a91a-4e3b36708d3d">
+<img width="250" alt="Screenshot 2024-03-09 at 5 59 30 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/b3123d12-9b55-45f4-a91a-4e3b36708d3d">
 
 
 ## part 2
