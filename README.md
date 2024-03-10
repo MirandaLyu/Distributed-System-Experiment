@@ -8,16 +8,16 @@ All parts built and tested by following instructions on [here](https://gortonato
 
 This part is mainly for building a local client and two servers (a Java one and a Go one) and comparing their multithreaded performance. The data temporarily stored in memory. In actual load testing sessions, both servers were deployed and ran on AWS EC2.
 
-The setup scenario is a simplified music service and the API used is [here](https://app.swaggerhub.com/apis/IGORTON/AlbumStore/1.0.0) which provides functionality about album storing and retrieving album by key.
+The setup scenario is a simplified music service and the API endpoints used are [here](https://app.swaggerhub.com/apis/IGORTON/AlbumStore/1.0.0). They provide functionality about album storing and retrieving album by key.
 
-The test was using different sizes of thread groups and each thread ran 2000 requests concurrently. The test result was not perfect, but it was on the right track: the throughput per second for consuming 600,000 requests can be over 2000 and Go did perform faster tha Java server in general. One example of the test window is like:
-```
-<pic1>
-```
-And the throughput change over a test session is like:
-```
-<pic2>
-```
+The test was using different sizes of thread groups and each thread ran 2000 requests concurrently (1000 GET and 1000 POST requests). The test result was not perfect, but it was on the right track: the throughput per second for consuming 600,000 requests can be over 2000 and Go did perform faster tha Java server in general. One example of the test window is like:
+
+<img width="494" alt="Screenshot 2024-03-09 at 5 59 17 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/ef53e352-ee26-453b-9c33-ce6352d6fc3a">
+
+And the throughput change over consuming 600,000 requests is like:
+
+<img width="382" alt="Screenshot 2024-03-09 at 5 59 30 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/b3123d12-9b55-45f4-a91a-4e3b36708d3d">
+
 
 ## part 2
 
