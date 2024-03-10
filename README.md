@@ -1,6 +1,6 @@
 # Distributed System Experiment
 
-This is a project built for learning the concepts in distributed system.
+This is a project built for learning the concepts in distributed system. The code displayed just shows the main files for each part.
 
 All parts built and tested by following instructions on [here](https://gortonator.github.io/bsds-6650/).
 
@@ -57,7 +57,12 @@ And this is the performance look for all tests:
 
 ## part 4
  
-This part builds a new [endpoint](https://app.swaggerhub.com/apis/IGORTON/AlbumStore/1.2#) for querying the number of likes and dislikes for an album.
+This part builds a new [endpoint](https://app.swaggerhub.com/apis/IGORTON/AlbumStore/1.2#) in the part 3 server - querying the number of likes and dislikes for an album.
 
-The test then is to query the number of likes and dislikes in multithreaded environment and try to get the best response time as the system can.
+This part is mainly for practicing testing mixed loads at the same time. (running previous thread groups and running 3 separate threads for the new GET simultaneously)
+
+## final thought :relaxed:
+
+* Everything in distributed system sounds easy to implement, but in fact requires lots of patience and hard work. Every new thing can have new problems.
+* This experiment has lots of places that can improve and also points out to some areas I haven't been very familiar, like network.
 
