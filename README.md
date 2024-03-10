@@ -25,7 +25,7 @@ This part builds a database on top of the Java version of part 1 and compares th
 
 I chose Redis as database because I wanted to try it. 
 
-After adding a AWS application load balancer, the design looks like this:
+After adding an AWS application load balancer, the system design looks like this:
 
 <img width="380" alt="Screenshot 2024-03-09 at 8 48 06 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/04aadb10-f6ec-45ac-b3ec-edffb77545ed">
 
