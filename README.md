@@ -27,12 +27,12 @@ I chose Redis as database because I wanted to try it.
 
 After adding a AWS application load balancer, the design looks like this:
 
-<img width="300" alt="Screenshot 2024-03-09 at 8 48 06 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/04aadb10-f6ec-45ac-b3ec-edffb77545ed">
+<img width="380" alt="Screenshot 2024-03-09 at 8 48 06 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/04aadb10-f6ec-45ac-b3ec-edffb77545ed">
 
 Same test loads were used on testing the single server vs two servers plus an application load balancer. Test results clearly showed increase in throughput performance by 50% after adding the load balancer:
 
-<img width="300" alt="Screenshot 2024-03-09 at 8 48 50 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/39ccda85-5d5b-47df-97cd-91c13b3b5033">
-<img width="300" alt="Screenshot 2024-03-09 at 8 50 03 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/39e2ef19-0e52-418c-8939-24242d002833">
+<img width="370" alt="Screenshot 2024-03-09 at 8 48 50 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/39ccda85-5d5b-47df-97cd-91c13b3b5033">
+<img width="370" alt="Screenshot 2024-03-09 at 8 50 03 PM" src="https://github.com/MirandaLyu/Distributed-System-Experiment/assets/115821003/39e2ef19-0e52-418c-8939-24242d002833">
 
 
 Since the best throughput didn't exceed 2000, I later tried to change EC2s' types from t2.micro to t2.medium and it finally went over 2000.
